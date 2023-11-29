@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }}{% endblock %}
+
+{% block content %}
+
+<div class="card" style="width: 24rem;">
+    <div class="card-header">
+        <h1 class="mt-2">{{ course.title }}</h1>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: {{ course.price }}</li>
+        <li class="list-group-item">Students Qty: {{ course.students_qty }}</li>
+        <li class="list-group-item">Reviews Qty: {{ course.reviews_qty }}</li>
+        <li class="list-group-item">Category: {{ course.category }}</li>
+    </ul>
+    <button class="btn btn-primary">Buy</button>
+</div>
+
+{% endblock %}
