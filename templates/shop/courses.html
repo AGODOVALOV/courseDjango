@@ -17,7 +17,11 @@
     <tbody>
     {% for course in courses %}
     <tr>
-        <td>{{ course.title }}</td>
+        <td>
+            <!--            <a href="/shop/{{ course.id }}">{{ course.title }}</a>-->
+            <!--            <a href={{ course.id }}>{{ course.title }}</a>-->
+            <a href={% url "shop:single_course" course.id %}>{{ course.title }}</a>
+        </td>
         <td>{{ course.price }}</td>
         <td>{{ course.students_qty }}</td>
         <td>{{ course.reviews_qty }}</td>
